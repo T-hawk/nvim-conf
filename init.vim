@@ -19,12 +19,13 @@ set clipboard=unnamed
 
 nnoremap<C-i> :tabp<CR>
 nnoremap<C-o> :tabn<CR>
-nnoremap<C-t> :Files<CR>
-nnoremap<C-f> :Rg<Space>
 nnoremap<C-r> :so %<CR>
 nnoremap <C-w> :q<CR>
 nnoremap <C-s> :w<CR>
 nnoremap <leader>D :Dash<Space>
+
+nnoremap <C-t> <cmd>Telescope find_files<cr>
+nnoremap <C-f> <cmd>Telescope live_grep<cr>
 
 nnoremap Y Y
 
@@ -63,6 +64,8 @@ call plug#begin()
   Plug 'mattn/emmet-vim'
   Plug 'rizzatti/dash.vim'
   Plug 'ElmCast/elm-vim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
 
   Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
